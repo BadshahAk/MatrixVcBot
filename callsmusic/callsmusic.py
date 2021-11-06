@@ -1,11 +1,11 @@
 from pyrogram import Client
-from pytgcalls import PyTgCalls
+from pytgcalls import PytgCalls
 
 import config
 from . import queues
 
 client = Client(config.SESSION_NAME, config.API_ID, config.API_HASH)
-pytgcalls = PyTgCalls(client)
+pytgcalls = PytgCalls(client)
 
 
 @pytgcalls.on_stream_end()
